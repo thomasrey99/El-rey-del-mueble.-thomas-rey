@@ -1,0 +1,591 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#container{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 200px auto auto 250px;
+    grid-template-areas: "header header header header"
+                         "menuPrp menuPrp menuPrp menuPrp"
+                         "main main main main"
+                         "footer footer footer footer";
+    gap: 10px;
+}
+/* header */
+header{
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-end;
+    background-image: url(../img/header.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* login and registro */
+#loginAndRegistro{
+    margin: 10px 10px 0px 0px;
+    height: 20px;
+    display: flex;
+}
+#loginAndRegistro ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+#loginAndRegistro ul li{
+    padding: 10px;
+}
+#loginAndRegistro ul li A{
+    text-decoration: none;
+    color: #F2F2F2;
+    font-family: 'Nunito Sans', sans-serif;
+
+}
+#loginAndRegistro ul li A:hover{
+    color: #F28B50;
+}
+/* close log in and registro */
+/* close header */
+/* menu prp */
+#menuPrp{
+    grid-area: menuPrp;
+    position: sticky;
+    top:0;
+}
+#menuPrp ul{
+    list-style: none;
+}
+#menuPrp ul li{
+    display: inline;
+}
+#menuPrp ul li a{
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    width: 20%;
+    height: 50px;
+    font-family: 'Nunito', sans-serif;
+    line-height: 50px;
+    background-color: #F2F2F2;
+    color: #0D0D0D;
+    transition: all 0.5s;
+}
+#menuPrp ul li a:hover{
+    background-color: #F28B50;
+}
+/* close menu prp */
+main{
+    grid-area: main;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* encabezados */
+h1.titulo{
+    text-align: center;
+    color :#F27405;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    padding: 30px;
+}
+h2{
+    text-align: left;
+    color: #F2F2F2;
+    font-family: 'Nunito', sans-serif;
+    margin: 10px 0px 10px 0px;
+    background: #0D0D0D;
+    text-align: center;
+}
+h3{
+    text-align: left;
+    color: #F2F2F2;
+    font-family: 'Nunito', sans-serif;
+    margin: 10px 0px 10px 0px;
+    background: #0D0D0D;
+    text-align: center;
+}
+h4{
+    color: #F2F2F2;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-bottom: 10px;
+}
+h5{
+    color: #F2F2F2;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 40px 0px 0px 10px;
+}
+/* texto */
+.texto{
+    text-align: left;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    margin: 10px;
+    padding: 5px;
+}
+.texto a{
+    text-decoration: none;
+    color: #F28B50;
+}
+/* seccion presentacion */
+.video iframe{
+    width:100%;
+    height:350px;
+}
+/* seccion proyectos */
+.seccion1 #proyectos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction:row;
+    align-content: center;
+}
+#proyectos .proyecto{
+    box-sizing: border-box;
+    padding: 10px;
+}
+.proyecto img{
+    width: 300px;
+}
+.subProyectos{
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #0D0D0D;
+    padding: 10px;
+}
+
+/* close seccion proyectos */
+/* footer */
+footer{
+    grid-area: footer;
+    background-color: #0D0D0D;
+}
+.newsletter_redes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+/* box newsletter */
+#newsletter{
+    margin: 20px 0px 0px 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+#mail_newsletter{
+    font-family: 'Nunito Sans', sans-serif;
+    border-color: #F28B50;
+}
+/* redes-bar */
+nav#redes{
+    width: 20%;
+    background-color: #F2F2F2;
+    height: 20px;
+    margin: 10px 10px 0px 0px;
+    justify-content: end;
+}
+nav#redes ul{
+    list-style: none;
+}
+
+nav#redes ul li{
+    display: inline;
+}
+nav#redes ul li a{
+    display: inline-block;
+    text-decoration: none;
+    width: 25%;
+    height: 20px;
+    text-align: center;
+    transition: all 0.5s;
+}
+nav#redes ul li a:hover{
+    background-color: #0D0D0D;
+    box-shadow: 0px 0px 10px #F2F2F2;
+}
+nav#redes ul li a span{
+    line-height: 20px;
+}
+nav#redes ul li a span.icon-facebook2{
+    color:#1B4F72  ;
+}
+
+nav#redes ul li a span.icon-instagram{
+    color: #a70b59;
+}
+nav#redes ul li a span.icon-twitter{
+    color: #0a81cf;
+}
+nav#redes ul li a span.icon-youtube{
+    color: #ec0f0f;
+}
+/* close redes-bar */
+/* Landing page "registrar" */
+.tituloRegistroLogin{
+    font-family: 'Nunito', sans-serif;
+    color: #F2F2F2;
+    background-color: #0D0D0D;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+    width:100%;
+}
+#formularioRegistroAndLogin{
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    color: #F2F2F2;
+    font-size: 16px;
+    width: 50%;
+    background-color: #0D0D0D;
+    align-items:center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+#allInputs{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+}
+label{
+    margin: 10px;
+}
+/* buttons */
+.btn{
+    font-family: 'Nunito', sans-serif;
+    background-color: #F2F2F2;
+    transition: 0.5s;
+    border: 2px solid;
+    margin: 10px;
+    padding: 5px;
+}
+.btn:hover{
+    background-color: #F28B50;
+    box-shadow: 0px 0px 10px #F2F2F2;
+}
+.btnNew{
+    font-family: 'Nunito', sans-serif;
+    background-color: #F2F2F2;
+    transition: 0.5s;
+    border: 2px solid;
+    margin-top: 10px;
+}
+.btnNew:hover{
+    background-color: #F28B50;
+    box-shadow: 0px 0px 10px #F2F2F2;
+}
+.btn_action{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+}
+.btn_action.btnNew{
+    margin: 5px;
+}
+/* products, news, collections */
+table{
+    width: 100%;
+    text-align: center;
+    border-style: solid;
+    border-color: #0D0D0D;
+    font-family: 'Nunito', sans-serif; 
+    margin: 10px 0px 0px 0px;
+    box-sizing: border-box;
+}
+th{
+    border-style: solid;
+    border-color: #0D0D0D;
+    background: #0D0D0D;
+    color: #F2F2F2;
+}
+td{
+    border-style: solid;
+    border-color: #0D0D0D;
+}
+#categorias{
+    width: 70%;
+    position: relative;
+}
+#categorias ul{
+    list-style: none;
+}
+#categorias ul li{
+    display: inline;
+}
+#categorias ul li a{
+    display: inline-block;
+    text-decoration: none;
+    width: 25%;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    background-color: #F27405;
+    color: #F2F2F2;
+    transition: all 0.5s;
+}
+#categorias ul li a:hover{
+    background-color: #0D0D0D;
+}
+.producto{
+    width: 50%;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.coleccion{
+    width: 100%;
+}
+#categoriasProductos{
+    width: 90%;
+    position: relative;
+}
+#categoriasProductos ul{
+    list-style: none;
+}
+#categoriasProductos ul li{
+    display: inline;
+}
+#categoriasProductos ul li a{
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    background-color: #F27405;
+    color: #F2F2F2;
+    transition: all 0.5s;
+}
+#categoriasProductos ul li a:hover{
+    background-color: #0D0D0D;
+}
+h3.nuevos{
+    margin: 5px;
+    padding: 5px;
+}
+#proyectosNuevos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+#proyectosNuevos .new img{
+    width: 300px;
+    height: 300px;
+    padding: 5px;
+    margin: 5px;
+}
+#budgetForm{
+    background-color: #0D0D0D;  
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+#budgetForm div{
+width: 100%;
+padding: 5px;
+margin: 5px;
+}
+#budgetForm div .input{
+    width: 100%;
+    height: 30px;
+}
+.textForm{
+    text-align: left;
+    font-family: 'Nunito', sans-serif;
+    color: #F2F2F2;
+    margin: 10px;
+}
+.textForm span{
+    color: #F27405;
+}
+.btn_budgetAction{
+    display: flex;
+    justify-content:space-around;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    width: 100%;
+}
+.btn_budgetAction .btnSubmit{
+    border: none;
+    background-color:#F27405;
+    width: 30%;
+    height:25px;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    color: #F2F2F2;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.btn_budgetAction .btnSubmit:hover{
+    background-color: #F2F2F2;
+    color: #0D0D0D;
+    box-shadow: 0 0 30px #F2F2F2;
+}
+.tex_area{
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+}
+.ubicacion{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.ubicacion .googleMaps{
+    width:80%;
+    height: 400px;
+    margin: 20px;
+}
+/* media queryes */
+@media(max-width:320px){
+    #menuPrp{
+        position: relative;
+    }
+    #menuPrp ul li{
+        display: block;
+    }
+    #menuPrp ul li a{
+        width: 100%;
+    }
+    #newsletter{
+        width: 60%;
+    }
+    #newsletter h4{
+        font-size: 13px;
+    }
+    #mail_newsletter{
+        width: 80%;
+    }
+    nav#redes{
+        width: 100;
+        height: auto;
+        margin: 10px 10px 0px 0px;
+        width: 20px;
+        display: flex;
+    }
+    nav#redes ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    nav#redes ul li{
+        width: 100%;
+    }
+    nav#redes ul li a{
+        width: 100%;
+    }
+    .video iframe{
+        height:200px;
+    }
+    #categorias ul li{
+        display: block
+    }
+    #categorias ul li a{
+        width: 100%;
+    }
+    table{
+        width: 100%;
+    }
+    #formularioRegistroAndLogin{
+        width: 90%;
+    }
+    .btn_action{
+        flex-direction: column;
+        align-items: center;
+    }
+    #budgetForm{
+        width: 100%;
+    }
+}
+@media(max-width: 480px){
+    #menuPrp{
+        position: relative;
+    }
+    #menuPrp ul li{
+        display: block;
+    }
+    #menuPrp ul li a{
+        width: 100%;
+    }
+    #newsletter{
+        width: 60%;
+    }
+    #newsletter h4{
+        font-size: 13px;
+    }
+    #mail_newsletter{
+        width: 80%;
+    }
+    nav#redes{
+        width: 100;
+        height: auto;
+        margin: 10px 10px 0px 0px;
+        width: 20px;
+        height: 80px;
+        display: flex;
+    }
+    nav#redes ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    nav#redes ul li{
+        width: 100%;
+    }
+    nav#redes ul li a{
+        width: 100%;
+    }
+    .video iframe{
+        height:200px;
+    }
+    #categorias ul li{
+        display: block
+    }
+    #categorias ul li a{
+        width: 100%;
+    }
+    table{
+        width: 100%;
+    }
+    #budgetForm{
+        width: 80%;
+    }
+    #formularioRegistroAndLogin{
+        width: 90%;
+    }
+    .btn_action{
+        flex-direction: column;
+        align-items: center;
+    }
+}
